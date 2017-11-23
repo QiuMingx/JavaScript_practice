@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var age = 35;
+        // if(age>18){
+        //     alert("你已成年！")
+        // }
+        // var  age = prompt("请输入你的年龄：");
+        // if(age<18){
+        //     alert("您还没有成年！");
+        // }else if(age >= 18 && age <= 59){
+        //     alert("您已经成年，请提供你的身份证号");
+        // }else{
+        //     alert("您已经超出");
+        // } 
+        alert(typeof NaN);
+        var paw = prompt("请输入你的密码：");
+        if(paw.length == 6){
+            if(isNaN(paw)){
+                alert("请输入数字");
+            }else{
+                alert("密码设置成功");
+            }
+
+        }else{
+            alert("请输入6位数字密码");
+        }
+        
+    </script>
+     
+</body>
+</html>

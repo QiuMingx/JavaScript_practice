@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="退 出" id="quit">
+    <script>
+        window.onload = function(){
+            window.open("window.html","newwindow","width=400,height=200,left=0,top=0,toolbar =0,menubar=0,scr\
+            ollbars=no,location =no, startus = no ");
+            var quit = document.getElementById('quit');
+            quit.onclick = function(){
+                window.close();
+        }
+    }
+
+    </script>
+</body>
+</html>

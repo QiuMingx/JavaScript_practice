@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // "use strict"
+        // function inner(){
+        //     // arguments 
+        //     console.log(arguments.length);
+        //     console.log(arguments[1]); //索引是从0开始的正整数。
+        // }
+        // inner(10,5);
+        // function add(num1, num2){
+        //     // 非严格模式下可以修改传入参数值
+        //     arguments[0]=99;
+        //     console.log(num1);
+        // }
+        // add(55, 88);
+        // 求任意一组数的平均值
+        function getAvg(){
+            var sum = 0;
+            for (var i=0; i<arguments.length; i++){
+                sum+=arguments[i];
+            }
+            return sum / i;
+        }
+        console.log(getAvg(68));
+    </script>
+</body>
+</html>

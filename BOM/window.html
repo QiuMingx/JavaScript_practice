@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <span id="a">iphone6s</span>
+        <input type="button" value="删除" id="btn">
+
+    </div>
+    
+    <script>
+        var age = 15;
+        function sayAge(){
+            // alert('我' + age);
+        }
+        // 声明一个全局变量
+        window.username = "marry";
+        window.sayName = function(){
+            // alert("我是" + this.username);
+        }
+        sayAge();
+        window.sayName();
+
+        // confirm()
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+            //  确认框中的换行，用"\n"
+            var flog = window.confirm("你确定要删除吗？删除之后\n该信息将不可恢复！");
+            if(flog){
+                btn.style.color = "red";
+                // document.getElementsByTagName('span')[0].innerHTML = "" ;
+                console.log(mes);
+                // document.getElementsByTagName('span').innerHTML = "";
+            }else{
+                btn.style.color = "green";
+            }
+        }
+        // 弹出输入框
+        var message = prompt("请输入您的星座","天秤座");
+        console.log(message);
+        
+    </script>
+</body>
+</html>

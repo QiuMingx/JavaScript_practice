@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // html是从页面从上到下执行的，在执行JavaScript时为加载页面所以获取不到元素
+        // 使用onload函数
+        window.onload = function(){
+        var box = document.getElementById("box");
+        function clicked(){
+            alert('我被点击了');
+        }
+        box.onclick = clicked;
+    }
+    </script>
+</head>
+<body>
+    <div id="box">这一个div</div>
+</body>
+</html>

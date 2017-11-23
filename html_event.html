@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .btn{width:140px;height:30px;line-height: 30px;background:#00f;
+        color:#fff;font-size:14px;text-align: center; border-radius:5px;
+        cursor:pointer;margin-top:30px;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="弹 出" onclick="alert('我是按钮')">
+    <div class="btn" id="btn" onmouseover="mouseoverFn(this)" onmouseout="mouseoutFn(this)" >开始</div>
+    <script>
+        function mouseoverFn(btn){
+            console.log(btn);
+            btn.style.background="red";
+        }
+        function mouseoutFn(btn){
+            btn.style.background = "blue";
+        }
+    </script>
+    
+</body>
+</html>

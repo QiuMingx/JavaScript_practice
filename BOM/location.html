@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1{height: 400px;background:#ccc; }
+        .box2{height: 1000px;background: #666;}
+        ul{
+            list-style: lower-roman;
+        }
+    
+    </style>
+</head>
+<body>
+    <a href="change_url.html">这是change_url页面</a>
+    <div class="box1" id="top"></div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="box2"></div>
+    <input type="button" value="返回顶部" id="btn">
+    <script>
+        // location.href返回完整url
+        console.log(location.href);
+        // 获取锚点
+        console.log(location.hash);
+        var btn = document.getElementById('btn');
+        //  通过hash来实现锚点功能
+        btn.onclick = function(){
+            location.hash = "#top";
+            
+        }
+        // 获取服务器名称和端口号
+        console.log(location.host);
+        // 返回URL中的目录和文件名
+        console.log(location.pathname);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .t{
+            color:red;
+            font-size:20px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        元素
+    </div> 
+    <ul id="list1">
+        <li>前端开发</li>
+        <li>服务器开发</li>
+        <li>UI设计</li>
+        <li>UI设计</li>
+        <li>UI设计</li>
+    </ul>
+    <p id="text" class="text nk" align="center">文本</p>
+    <script>
+        var box=document.getElementById("box");
+        box.style.color = '#f00';
+        box.style.fontWeight="bold";
+        console.log(box);
+        var lis=document.getElementsByTagName('li');
+        console.log(lis);
+        for (var i=0; i<lis.length;i++){
+            console.log(lis[i].innerHTML)
+            lis[i].innerHTML+="程序";
+           
+            lis[i].style.color = "blue";
+            // if(i==0){
+            //     lis[i].style.backgroundColor="#ccc";
+            // }else if(i==1){
+            //     lis[i].style.backgroundColor = "#666";
+            // }else if(i==2){
+            //     lis[i].style.backgroundColor = "#999";
+            // }else{
+            //     lis[i].style.backgroundColor = "#333";
+            // }
+        }
+        lis[1].className = "t";
+        var p=document.getElementById("text");
+        console.log(p.getAttribute("class"));
+        // 设置属性 添加
+        p.setAttribute("class","t");
+        p.setAttribute("dataColor","red");
+        // 删除属性
+        p.removeAttribute("align");
+        console.log(p.className);
+
+
+    </script>
+</body>
+</html>

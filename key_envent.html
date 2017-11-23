@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>您还可以输入 <span id="count"></span></p>
+    <div class="input">
+        <textarea name="" id="text" cols="70" rows="10"></textarea>
+    </div>
+    <script>
+        // 获取文本框
+        var text=document.getElementById('text'),
+            total = 30,
+            showSum = document.getElementById('count');
+        //  在事件触发的function里，用一个参数接收事件对象
+        document.onkeydown = function(event){
+            // 获取文本框值得长度
+            var len = text.value.length;
+            var allow = total -len;
+            showSum.innerHTML = allow;
+        }
+    </script>
+</body>
+</html>

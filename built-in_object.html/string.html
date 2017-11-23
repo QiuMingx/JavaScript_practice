@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        var str = "hello world";
+        // IE7版本以上不支持中括号方式。
+        // console.log(str[1]);
+        // console.log(str.charAt(15));
+        // console.log(str.charCodeAt(2));
+        // indeOf()
+        var email = "marry@163.com";
+        // console.log(email.indexOf("@"));
+        // 不包括end
+        console.log(str.slice(6,3));
+        // console.log(str.slice(-7));
+        // substring  负数转换为零
+        console.log(str.substring(-7,5));
+        console.log(str.substring(5,-9));
+        //  substr 
+        console.log(str.substr(-5,-8));
+        // 获取扩展名
+        var url = "http://baidu.com/index.txt";
+        function getFileFormat(str12){
+            var index = str12.lastIndexOf(".")
+            return str12.slice(index);
+        }
+        var formatName = getFileFormat(url);
+        console.log(formatName);
+        var str3 = "welcome-to-beijing";
+        var arr2 = str3.split("-");
+        console.log(arr2); 
+        // 替换
+        var newstr3 = str3.replace("-","  ");
+        console.log(newstr3);
+        // toUpperCase() 字符串转换为大写 不改变原字符串
+        var newUpper = str3.toUpperCase();
+        console.log(newUpper);
+        // toLowCase() 字符串转换为小写
+        var str4 = "HELLO WORLD";
+        console.log(str4.toLowerCase());
+        console.log(str4);
+        // border-left-color 转换为 borderLeftColor 的函数
+        function camelback(str9){
+            var str_arr = str9.split("-");//newStr = str_arr[0];
+            for(var i = 1; i<str_arr.length;i++){
+                // newStr +=tr_arr[i].charAt(0).toUpperCase() + str_arr[i].substr(1);
+                str_arr[i] = str_arr[i].charAt(0).toUpperCase() + str_arr[i].slice(1);
+                console.log(str_arr[i]);
+            }
+            return str_arr.join("");
+        }
+        var camelFormat = camelback("border-left-color");
+        console.log(camelFormat);
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>

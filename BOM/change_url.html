@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>location位置操作</title>
+</head>
+<body>
+    <a href="history.html"> history页面</a>
+    <input type="button" value="刷新" id="reload">
+    <input type="button" value="操作页面" id="control">
+    <script>
+        // setTimeout(function(){
+            // 跳转页面
+            // location.href = "location.html";
+            // window.location = 'location.html'
+            // 重定向 不产生浏览记录
+        //     location.replace("location.html");
+        // },1000)
+        // 建议放在代码之后
+        document.getElementById('reload').onclick = function(){
+            location.reload(true);
+        }
+        document.getElementById('control').onclick = function(){
+            var flog = window.confirm("点击确然刷新");
+            if(flog){
+                location.reload();
+            }else{
+                location.replace("http://www.fbbb.cn");
+            }
+        }
+
+    </script>
+</body>
+</html>

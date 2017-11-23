@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 每隔指定时间调用
+        var intervalId = setInterval(function(){
+            console.log('hello')
+        },1000)
+
+        // 10秒之后停止打印
+        setTimeout(function(){
+            // 清除间歇调用
+            clearInterval(intervalId);
+        },10000);
+
+        var num =1,
+            max = 10,
+            timer=null; //null释放内存
+        // 每隔1秒递增一次，直到num的值等于max清除
+        // timer =setInterval(function(){
+        //     console.log(num);
+        //     num++
+        //     if(num > max){
+        //         clearInterval(timer);      
+        //     }
+        // },1000 )
+
+        // 使用超时调用
+        function inCreamentNum(){
+            console.log(num);
+            num ++;
+            if(num<=max){
+                setTimeout(inCreamentNum,1000);
+            }else{
+                clearTimeout(timer);
+            }
+        }
+        timer = setTimeout(inCreamentNum,1000);
+
+        function times() {
+            
+            console.log(num++);
+            t = setTimeout(function(){times()},1000);
+        }
+        times();
+
+        // function setbgColor(){
+        //     document.bgColor="red";
+        // }
+        // setTimeout(setbgColor, 1000);
+        // setTimeout(function setbgColor(){document.bgColor="#ff0000";}, 1000);
+        // setTimeout("document.bgColor='#00ff00'", 1000);
+
+
+    </script>
+</body>
+</html>

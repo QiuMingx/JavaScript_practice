@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 超时调用
+        // setTimeout("alert('已过2秒')",10000)
+        // 匿名函数的方式超时调用
+        // setTimeout(function(){
+        //     alert("匿名函数超时调用");
+
+        // },2000)
+        // 函数的方式超时调用
+        var funCall = function(){
+            alert("函数的方式超时调用");
+        }
+        var timeclear = setTimeout(funCall,3000);
+        // timeclear;
+        // 清除超时调用
+        clearTimeout(timeclear);
+        var num = 1;
+        function times() {
+            console.log(num++);
+            if (num<=10){
+                t = setTimeout(function(){times()},1000);
+            }
+            
+        }
+        times();
+
+    </script>
+</body>
+</html>

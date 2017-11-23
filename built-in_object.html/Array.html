@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var colors=new Array(3);
+        colors[0] = '#f00';
+        colors[1] = '#0f0';
+        colors[2] = '#00f'; 
+        var nums = new Array(1,2,3,5);
+        console.log(colors);
+        console.log(nums);
+        var cols = ["red", 123 , "green"];
+        console.log(cols[3]);
+        var infos = [6,"marry",true,{name:"liming"}]
+        console.log(infos);
+        var arr = ["a","b","c","d"];
+        arr.length = 3;
+        console.log(arr[3]);
+        console.log(arr);
+        // arr[99] = "2"
+        // console.log(arr);
+        // push 方法 在数组尾部加入元素
+        console.log(arr.push("123","12312","123123"));
+        console.log(arr);
+        // unshift 方法 在数组开始加入元素返回新的长度
+        console.log(arr.unshift(12,123));
+        console.log(arr);
+        // pop 删除数组最后一个元素并返回
+        console.log(arr.pop());
+        // shift 删除数组开始一个元素并返回
+        console.log(arr.shift());
+        // join 数组转换为字符串 默认逗号隔开， 返回字符串
+        console.log(arr.join("-"));
+        // reverse() 反转数组 返回新数组
+        console.log(arr.reverse().join());
+     
+        // sort 对数组排序 按字符排序，参数
+        var arr2 = [9,23,15,-99,88,12,-2];
+        // 数字 降序
+        // arr2.sort(function(a,b){return b-a});
+        // 升序
+        // arr2.sort(function(a,b){return a-b});
+        console.log(arr2);
+        function arrayReverse(arr3){
+            var newArr = [];
+            var len = arr3.length
+            for(var i= 0;i<len; i++){
+                newArr.push(arr3.pop());
+            }
+            return newArr;
+        }
+        console.log(arrayReverse(arr2));
+
+        // concat() 连接两个或多个数组
+        var a1 = ['a','b','c'];
+        var a2 = ['1','2','3'], a3;
+        a3 = a1.concat(a2,[99,34]);
+        console.log(a3);
+        // slice 截取片段
+        var colors = ["red","green","blue","yellow","orange" ];
+        var newColors = colors.slice(1,3);
+        console.log(newColors);
+        // 完成以下代码段，实现b数组对a数组的拷贝，方法越多越好。
+        var a = [1,"yes",3],b;
+        // concat()
+        // b = [].concat(a);
+        // slice()
+        b = a.slice(0);
+        // b = a;
+        console.log(b);
+        var arr8 = [1,2,3,4,5,6,7,8,9];
+        var newArr = arr8.slice(-6,8);
+        console.log(newArr);
+        // splice 
+        // 删除
+        var arr7 = ["a","b","c","d"];
+        // var delArr = arr.splice(1,2);
+        // console.log(delArr);
+        // 插入
+        // var insertArr = arr7.splice(1,0,123,123,123);
+        // console.log(arr7);
+        // console.log(insertArr);
+        // 替换
+        var replaceArr = arr7.splice(1,2,"x","y","z");
+        console.log(replaceArr);
+        console.log(arr7);
+        // indexOf() 查找
+        var pos = arr7.indexOf("y")
+        console.log(pos);
+        // lastIndexOf() 查找
+        // 封装一个方法实现indexOf的功能
+        function searchArr(arr0,arg){
+            for (var i=0 ,len=arr0.length; i<len;i++){
+                if (arr0[i]===arg){
+                    return i;
+                }
+            }
+            return -1;
+        }
+        var c = [1,2,3,5,3];
+        console.log(searchArr(c,2));
+    </script> 
+</body>
+</html>

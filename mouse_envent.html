@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            width:200px;height: 200px;background:#f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">拖动</div>
+    <script>
+        var box = document.getElementById('box');
+        // 绑定按下的事件
+        box.onmousedown = function(){
+            console.log('鼠标被按下');
+        }
+        // 绑定鼠标移动事件
+        box.onmousemove = function(){
+            console.log('我被移动了');
+        }
+        // 绑定松开的事件
+        box.onmouseup = function(){
+            console.log('我被松开了');
+        }
+        // 绑定鼠标点击事件
+        box.onclick = function(){
+            console.log('我被点击了');
+        }
+        
+        // 浏览器窗口尺寸发生改变时
+        window.onresize = function(){
+            console.log("窗口改变了");
+        }
+        //  拖动滚动条
+        window.onscroll = function(){
+            console.log('滚动条被滚动了');
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
